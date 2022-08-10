@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*,
+*::after,
+*::before,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    direction: ltr;
+    background: #FEFBF6;
+    overflow: hidden;
+    font-family: 'Roboto', serif;
+}
+
+.container {
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 10px auto 6px auto;
+    padding: 1px;
+}
+
+.plan {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 0.5;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    transition: flex 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.plan.active {
+    flex: 5;
+}
+
+.plan1 {
+    background-image: url('./images/img1.jpg');
+
+}
+
+.plan2 {
+    background-image: url('./images/img2.jpg');
+}
+
+.plan3 {
+    background-image: url('./images/img3.jpg');
+}
+
+.plan4 {
+    background-image: url('./images/img4.jpg');
+}
+
+.plan5 {
+    background-image: url('./images/img5.jpg');
+}
+
+
+.plan h3 {
+    position: absolute;
+    bottom: 15px;
+    color: #FEFBF6;
+    background: #000;
+    padding: 8px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.4s ease-in 0.1s;
+}
+
+.plan.active h3 {
+    opacity: 1;
+}
+
+.copyright {
+    height: 30px;
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px auto 0 auto;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.copyright p {
+    color: #293462;
+}
+
+.copyright a {
+    color: #293462;
+    text-decoration: none;
+}
+
+.copyright span {
+    color: #D61C4E;
+    font-size: 1.5rem;
+    padding: 2px;
+}
+
+@media screen and (max-width: 600px) {
+
+    .plan4,
+    .plan5 {
+        display: none;
+    }
+}
